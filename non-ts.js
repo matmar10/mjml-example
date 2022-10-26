@@ -1,13 +1,13 @@
-import { join } from 'path';
-import { readFileSync } from 'fs';
-import mjml2html from 'mjml-core';
+const path = require('path');
+const fs = require('fs');
+const mjml2html = require('mjml-core').default;
 
 const examples = ['example-1.mjml', 'example-2.mjml', 'example-3.mjml'];
 const results = [];
 const errors = [];
 
 examples.forEach(filename => {
-  const src = readFileSync(join(__dirname, filename), 'utf8');
+  const src = fs.readFileSync(path.join(__dirname, filename), 'utf8');
   try {
     const html = mjml2html(src);
     results.push(html);

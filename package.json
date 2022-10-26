@@ -10,7 +10,7 @@
     "build": "tsc index.ts",
     "prestart": "npm run build",
     "start": "node index.js",
-    "validate": "mjml --validate example-1.mjml && mjml --validate example-2.mjml"
+    "validate": "mjml --validate example-1.mjml && mjml --validate example-2.mjml && mjml --validate example-3.mjml"
   },
   "repository": {
     "type": "git",
